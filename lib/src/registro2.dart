@@ -11,6 +11,7 @@ class _RegistroState extends State<Registro2> {
   var _lista = ['Producto', 'Servicio'];
 
   String _vista = 'Seleccione una Opcion';
+  String _vist = 'Seleccione una Opcion';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,6 +87,16 @@ class _RegistroState extends State<Registro2> {
                     ),
                   ),
                 ],
+              ),
+              Divider(indent: 2),
+              SizedBox(
+                child: LinearProgressIndicator(
+                  value: 0.33333,
+                  backgroundColor: Colors.grey,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.indigo),
+                ),
+                height: 10.0,
+                width: 330.0,
               ),
               Divider(indent: 2),
               Padding(
@@ -186,9 +197,11 @@ class _RegistroState extends State<Registro2> {
                 );
               },
             ).toList(),
-            onChanged: (_value) => {
+            onChanged: (String? _value) => {
               setState(
-                () {},
+                () {
+                  _vista = _value!;
+                },
               ),
             },
             hint: Text(_vista),
@@ -259,12 +272,14 @@ class _RegistroState extends State<Registro2> {
                   );
                 },
               ).toList(),
-              onChanged: (_value) => {
+              onChanged: (String? _value) => {
                 setState(
-                  () {},
+                  () {
+                    _vist = _value!;
+                  },
                 ),
               },
-              hint: Text(_vista),
+              hint: Text(_vist),
             ),
             _crearInput12(),
             _crearDescripcion2(),

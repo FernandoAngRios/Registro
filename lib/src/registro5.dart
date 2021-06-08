@@ -85,6 +85,16 @@ class _RegistroState extends State<Registro5> {
                 ],
               ),
               Divider(indent: 2),
+              SizedBox(
+                child: LinearProgressIndicator(
+                  value: 0.8333333,
+                  backgroundColor: Colors.grey,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.indigo),
+                ),
+                height: 10.0,
+                width: 330.0,
+              ),
+              Divider(indent: 2),
               Padding(
                 padding: EdgeInsets.only(bottom: 10),
                 child: Text('Bienvenido a un negocio en movimiento',

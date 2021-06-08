@@ -161,6 +161,16 @@ class _RegistroState extends State<Registro> {
                 ],
               ),
               Divider(indent: 2),
+              SizedBox(
+                child: LinearProgressIndicator(
+                  value: 0.166666,
+                  backgroundColor: Colors.grey,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.indigo),
+                ),
+                height: 10.0,
+                width: 330.0,
+              ),
+              Divider(indent: 2),
               Padding(
                 padding: EdgeInsets.only(bottom: 10),
                 child: Text('Bienvenido a un negocio en movimiento',
@@ -349,9 +359,11 @@ class _RegistroState extends State<Registro> {
               );
             },
           ).toList(),
-          onChanged: (_value) => {
+          onChanged: (String? _value) => {
             setState(
-              () {},
+              () {
+                _vista = _value!;
+              },
             ),
           },
           hint: Text(_vista),
@@ -381,9 +393,11 @@ class _RegistroState extends State<Registro> {
                   );
                 },
               ).toList(),
-              onChanged: (_value) => {
+              onChanged: (String? _value) => {
                 setState(
-                  () {},
+                  () {
+                    _vist = _value!;
+                  },
                 ),
               },
               hint: Text(_vist),
@@ -475,9 +489,11 @@ class _RegistroState extends State<Registro> {
                   );
                 },
               ).toList(),
-              onChanged: (_value) => {
+              onChanged: (String? _value) => {
                 setState(
-                  () {},
+                  () {
+                    _vis = _value!;
+                  },
                 ),
               },
               hint: Text(_vis),

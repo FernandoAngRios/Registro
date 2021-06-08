@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:image_picker/image_picker.dart';
 
 class Registro4 extends StatefulWidget {
   @override
@@ -87,6 +86,16 @@ class _RegistroState extends State<Registro4> {
                     ),
                   ),
                 ],
+              ),
+              Divider(indent: 2),
+              SizedBox(
+                child: LinearProgressIndicator(
+                  value: 0.666666,
+                  backgroundColor: Colors.grey,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.indigo),
+                ),
+                height: 10.0,
+                width: 330.0,
               ),
               Divider(indent: 2),
               Padding(

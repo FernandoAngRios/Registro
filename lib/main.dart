@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      initialRoute: 'registro4',
+      initialRoute: 'registro',
       color: Colors.blue,
       routes: {
         'registro': (context) => Registro(),
